@@ -98,7 +98,7 @@ function showTodos() {
 // ここにcreateTodo関数を作る
 function createTodo() {
   const task = prompt("タスクを入力してください");
-  if (task !== "") {
+  if (task) {
     todos.push(task);
     alert("新しいタスクを追加しました");
     showTodos();
@@ -135,7 +135,7 @@ function deleteTodo() {
     const deletedTodos = todos.splice(parsedNumber, 1);
     alert(deletedTodos + "を削除しました");
     showTodos();
-  } else if (isNaN(parsedNumber) === true) {
+  } else if (isNaN(parsedNumber)) {
     alert("不正な値のためスキップします");
   } else {
     alert("不正な値のためスキップします");
